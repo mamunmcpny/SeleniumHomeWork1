@@ -6,10 +6,9 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.Test;
 
 import java.util.concurrent.TimeUnit;
-
+@Test
 public class Login {
-    @Test
-    public void LoginPage() throws InterruptedException {
+       public void LoginPage() throws InterruptedException {
 
         System.setProperty("webdriver.chrome.driver", "./Drivers/windows/chromedriver.exe");// create path
 

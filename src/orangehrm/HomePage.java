@@ -9,7 +9,6 @@ import java.util.concurrent.TimeUnit;
 
 public class HomePage {
 
-    @Test
     public static void webPage() throws InterruptedException {
         System.setProperty("webdriver.chrome.driver", "./Drivers/windows/chromedriver.exe");
 
