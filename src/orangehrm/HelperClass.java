@@ -4,19 +4,20 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+import java.util.concurrent.TimeUnit;
+
 public class HelperClass {
 
     public static WebDriver driver;
 
-    public static void InvokeBrowser(String url) {
+    public static void invokeBrowser(String url) {
 
         System.setProperty("webdriver.chrome.driver", "./Drivers/windows/chromedriver.exe");// create path
 
         driver = new ChromeDriver();//create object of driver
         driver.get(url);// load url...
-
         driver.manage().window().maximize();// maximize window
-
+        driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
     }
 
     public static void login(String uid, String pass) {
@@ -50,10 +51,9 @@ public class HelperClass {
         driver.findElement(By.id("welcome")).click();
         driver.findElement(By.xpath("//a[text()='Logout']")).click();
 
-
     }
 
-    public static void quitbrower(){
+    public static void quitbrower() {
 
         driver.quit();
     }
