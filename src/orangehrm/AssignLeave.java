@@ -15,12 +15,15 @@ public class AssignLeave extends HelperClass {
         driver.findElement(By.xpath("(//span[@class='quickLinkText'])[1]")).click();
         driver.findElement(By.xpath("//input[@name='assignleave[txtEmployee][empName]']")).sendKeys(empName);
 
-        WebElement selectDd = driver.findElement(By.name("assignleave[txtLeaveType]"));
-        Select leaveType = new Select(selectDd);
+        WebElement selectDropDown = driver.findElement(By.name("assignleave[txtLeaveType]"));
+        Select leaveType = new Select(selectDropDown);
         leaveType.selectByVisibleText("US - Personal");
-        //click on calender //
-        driver.findElement(By.xpath("//input[@name='assignleave[txtFromDate]']")).click();
-        //select date
+        //click on calender
+        driver.findElement(By.name("assignleave[txtFromDate]")).click();
+        //or
+        //driver.findElement(By.xpath("//input[@name='assignleave[txtFromDate]']")).click();
+        //select date    //" Lenth of Webelements :" +
+
         List<WebElement> dates = driver.findElements(By.xpath("//td[@data-handler='selectDay']/a"));
         System.out.println(" Lenth of Webelements :" + dates.size());
 
@@ -31,7 +34,10 @@ public class AssignLeave extends HelperClass {
                 eachDate.click();
                 break;
             }
+
         }
+
+        // Admin / admin123
         // Select calender to
         driver.findElement(By.xpath("//input[@name='assignleave[txtToDate]']")).click();
         //select to date
@@ -51,7 +57,8 @@ public class AssignLeave extends HelperClass {
         Select pDays = new Select(partialDays);
         pDays.selectByValue("start_end");
 
-        driver.findElement(By.cssSelector("#assignBtn")).click();
+        driver.findElement(By.id("assignBtn")).click();
+        //driver.findElement(By.cssSelector("#assignBtn")).click();
 
         driver.findElement(By.cssSelector("#confirmOkButton")).click();
 

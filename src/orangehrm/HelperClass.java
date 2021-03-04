@@ -9,15 +9,25 @@ import java.util.concurrent.TimeUnit;
 public class HelperClass {
 
     public static WebDriver driver;
+    //public static WebDriver mostofa;
+
 
     public static void invokeBrowser(String url) {
 
         System.setProperty("webdriver.chrome.driver", "./Drivers/windows/chromedriver.exe");// create path
 
         driver = new ChromeDriver();//create object of driver
+        //mostofa=new ChromeDriver();
         driver.get(url);// load url...
         driver.manage().window().maximize();// maximize window
         driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
+
+
+
+       // mostofa.get("http://www.............");
+
+
+
     }
 
     public static void login(String uid, String pass) {
