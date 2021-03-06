@@ -20,9 +20,8 @@ public class HelperClass {
         //mostofa=new ChromeDriver();
         driver.get(url);// load url...
         driver.manage().window().maximize();// maximize window
+        driver.manage().deleteAllCookies();
         driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
-
-
 
        // mostofa.get("http://www.............");
 
