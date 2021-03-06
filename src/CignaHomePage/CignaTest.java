@@ -31,7 +31,7 @@ public class CignaTest extends CignaHelperClass {
     public static void aboutUs() {
         driver2.findElement(By.id("about-us-level-one-link")).click();
         driver2.findElement(By.xpath("//*[@id=\"1573385722195\"]/div/div[2]/div/div/ul/li[1]/a")).click();
-        driver2.findElement(By.cssSelector("#\\31 569893998371 > div > div.container.hero-padding > div > div > h1")).isDisplayed();
+
     }
 
     @Test

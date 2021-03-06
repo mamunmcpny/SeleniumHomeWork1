@@ -26,6 +26,10 @@ public class BookHotel extends HelperClass {
 
         }
 
+    }
+
+}
+
 
 //        driver.findElement(By.cssSelector("input[id='checkout'']")).click();
 //        List<WebElement> checkoutdate = driver.findElements(By.xpath(""))
@@ -37,9 +41,3 @@ public class BookHotel extends HelperClass {
 //
 //            }
 //        }
-
-
-
-    }
-
-}

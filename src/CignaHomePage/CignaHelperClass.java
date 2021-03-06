@@ -11,7 +11,7 @@ public class CignaHelperClass {
          static String cignaUrl = "https://www.cigna.com/";
 
         @BeforeMethod
-        public static void openBrowser() throws InterruptedException {
+        public static void openBrowser(){
 
             String chromeDriverPath = "./Drivers/windows/chromedriver.exe";
 
@@ -21,6 +21,7 @@ public class CignaHelperClass {
             driver2 = new ChromeDriver();
             //Launch Website
             driver2.get(cignaUrl);
+            driver2.manage().deleteAllCookies();
             driver2.manage().window().maximize();
 
         }
